@@ -9,17 +9,21 @@ formTask.addEventListener("submit", (event) => {
   const inputForm = document.querySelector(".input-form");
   console.log(inputForm.value);
 
-  // 4. Reference HTML element ul / wapper list
-  const wrapperList = document.querySelector(".task-list-wrapper");
+  if (inputForm.value) {
+    // 4. Reference HTML element ul / wapper list
+    const wrapperList = document.querySelector(".task-list-wrapper");
 
-  // 5. Create <li> using JS
-  const taskList = document.createElement("li");
+    // 5. Create <li> using JS
+    const taskList = document.createElement("li");
 
-  // 6. Masukkan input value ke <li>
-  taskList.innerHTML = inputForm.value;
+    // 6. Masukkan input value ke <li>
+    taskList.innerHTML = inputForm.value;
 
-  // 7. Append <li> ke <ul>
-  wrapperList.append(taskList);
+    // 7. Append <li> ke <ul>
+    wrapperList.append(taskList);
 
-  inputForm.value = "";
+    inputForm.value = "";
+  } else {
+    alert("Tidak boleh kosong!");
+  }
 });
