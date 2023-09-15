@@ -9,6 +9,7 @@ formTask.addEventListener("submit", (event) => {
   const inputForm = document.querySelector(".input-form");
   console.log(inputForm.value);
 
+  // Check if input value is null
   if (inputForm.value) {
     // 4. Reference HTML element ul / wapper list
     const wrapperList = document.querySelector(".task-list-wrapper");
